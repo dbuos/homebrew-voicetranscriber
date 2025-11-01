@@ -2,10 +2,10 @@ cask "voicetranscriber" do
   version "1.0.0"
   sha256 :no_check  # Skip SHA verification for unsigned personal builds
 
-  url "https://github.com/dbuos/VoiceTranscriber/releases/download/v#{version}/VoiceInk.dmg"
+  url "https://github.com/dbuos/VoiceTranscriberApp/releases/download/v#{version}/VoiceInk.dmg"
   name "VoiceInk"
   desc "Voice transcription app for macOS"
-  homepage "https://github.com/dbuos/VoiceTranscriber"
+  homepage "https://github.com/dbuos/VoiceTranscriberApp"
 
   # Disable quarantine for unsigned apps
   # This prevents the "macOS cannot verify" warning on your own devices
