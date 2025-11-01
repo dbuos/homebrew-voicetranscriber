@@ -16,15 +16,24 @@ cask "voicetranscriber" do
 
   app "VoiceInk.app"
 
+  # Ad-hoc sign after installation (required for Apple Silicon)
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-cr", "#{appdir}/VoiceInk.app"],
+                   sudo: false
+    system_command "/usr/bin/codesign",
+                   args: ["--force", "--deep", "--sign", "-", "#{appdir}/VoiceInk.app"],
+                   sudo: false
+  end
+
   # Add note about unsigned app
   caveats do
     <<~EOS
-      This is an unsigned personal build.
+      This is an unsigned personal build with ad-hoc signature.
 
-      If macOS prevents opening, run:
-        xattr -cr /Applications/VoiceInk.app
-
-      Or manually allow in System Settings > Privacy & Security
+      The app is automatically signed during installation.
+      If you still have issues opening, try:
+        sudo codesign --force --deep --sign - /Applications/VoiceInk.app
     EOS
   end
 
