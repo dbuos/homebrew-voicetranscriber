@@ -1,4 +1,4 @@
-cask "voiceink" do
+cask "voicetranscriber" do
   version "1.0.0"
   sha256 :no_check  # Skip SHA verification for unsigned personal builds
 

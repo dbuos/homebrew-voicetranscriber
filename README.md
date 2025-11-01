@@ -9,20 +9,20 @@ Personal Homebrew tap for easy deployment of VoiceInk across your devices.
 brew tap dbuos/voicetranscriber
 
 # Install VoiceInk
-brew install --cask voiceink
+brew install --cask voicetranscriber
 ```
 
 ## Updating
 
 ```bash
-brew upgrade --cask voiceink
+brew upgrade --cask voicetranscriber
 ```
 
 ## Uninstalling
 
 ```bash
 # Uninstall app
-brew uninstall --cask voiceink
+brew uninstall --cask voicetranscriber
 
 # Remove tap (optional)
 brew untap dbuos/voicetranscriber
@@ -55,15 +55,15 @@ brew untap dbuos/voicetranscriber
 4. **Update the cask** (if version changed)
    ```bash
    cd /path/to/homebrew-voicetranscriber
-   # Edit Casks/voiceink.rb and update the version number
-   git add Casks/voiceink.rb
+   # Edit Casks/voicetranscriber.rb and update the version number
+   git add Casks/voicetranscriber.rb
    git commit -m "Update to v1.0.0"
    git push
    ```
 
 5. **Install on your devices**
    ```bash
-   brew upgrade --cask voiceink
+   brew upgrade --cask voicetranscriber
    ```
 
 ## Notes
